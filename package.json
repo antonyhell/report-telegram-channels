@@ -1,0 +1,32 @@
+{
+  "name": "report-telegram-channels",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "pkg . && chmod +x dist/*",
+    "report": "node ./src/index.js ./channels.txt"
+  },
+  "keywords": [],
+  "author": "Antony Hell <antony@hell.direct>",
+  "license": "MIT",
+  "dependencies": {
+    "cli-progress": "^3.10.0",
+    "input": "^1.0.1",
+    "lodash": "^4.17.21",
+    "telegram": "^2.5.2"
+  },
+  "pkg": {
+    "targets": [
+      "node16-linux-arm64",
+      "node16-linux-x64",
+      "node16-macos-arm64",
+      "node16-macos-x64",
+      "node16-win-arm64",
+      "node16-win-x64"
+    ],
+    "compress": "Brotli",
+    "outputPath": "dist"
+  },
+  "bin": "src/index.js"
+}
