@@ -16,9 +16,9 @@ See example in channels.txt
 ### 2. Run built binary
 #### Select required binary
 
-- macOS Intel x86 / Apple silicone
-- Windows Intel x86 / ARM
-- Linux Intel x86 / ARM
+- macOS [Intel x86](dist/telegram-report-macos-x64) / [Apple silicone](dist/telegram-report-macos-arm64)
+- Windows [Intel x86](telegram-report-win-x64.exe) / [ARM](telegram-report-win-arm64.exe)
+- Linux [Intel x86](telegram-report-linux-x64) / [ARM](telegram-report-linux-arm64)
 
 #### Run command 
 This is an example for macOS Intel x86
