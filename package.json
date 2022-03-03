@@ -11,7 +11,7 @@
   "author": "Antony Hell <antony@hell.direct>",
   "license": "MIT",
   "dependencies": {
-    "chalk": "^5.0.0",
+    "ansi-colors": "^4.1.1",
     "cli-progress": "^3.10.0",
     "conf": "^10.1.1",
     "input": "^1.0.1",

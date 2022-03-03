@@ -1,4 +1,4 @@
-const chalk = require('chalk')
+const {bold} = require('ansi-colors')
 const {TelegramClient, Api} = require('telegram')
 const {StringSession} = require('telegram/sessions')
 const input = require('input')
@@ -65,7 +65,7 @@ module.exports = {
 
     if (!apiId) {
       console.log(`This application needs your Telegram API authentication details.
-  1. Login into your Telegram account here ${chalk.bold('https://my.telegram.org/')}
+  1. Login into your Telegram account here ${bold('https://my.telegram.org/')}
   2. Then click "API development tools" and fill your application details (only app title and short name required)
   3. Finally, click "Create application"
 `)
