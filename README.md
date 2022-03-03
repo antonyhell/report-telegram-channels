@@ -20,8 +20,17 @@ See example in channels.txt
 - Windows [Intel x86](https://github.com/antonyhell/report-telegram-channels/releases/latest/download/telegram-report-win-x64.exe) / [ARM](https://github.com/antonyhell/report-telegram-channels/releases/latest/download/telegram-report-win-arm64.exe)
 - Linux [Intel x86](https://github.com/antonyhell/report-telegram-channels/releases/latest/download/telegram-report-linux-x64) / [ARM](https://github.com/antonyhell/report-telegram-channels/releases/latest/download/telegram-report-linux-arm64)
 
-#### Run command 
-This is an example for macOS Intel x86
+#### Run command
+You can load list of channels to report either from file or from URL
+
+> ℹ️ This is an example for macOS Intel x86
+
+To load file from URL 
+```sh
+telegram-report-macos-x64 https://raw.githubusercontent.com/antonyhell/report-telegram-channels/main/channels.txt
+```
+
+To load file from [channels.txt](https://raw.githubusercontent.com/antonyhell/report-telegram-channels/main/channels.txt) file
 ```sh
 telegram-report-macos-x64 channels.txt
 ```
