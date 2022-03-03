@@ -4,9 +4,9 @@ const logo = require('./logo')
 const _isEmpty = require('lodash/fp/isEmpty')
 
 const arguments = [].concat(process.argv)
-const channelsFile = arguments[2]
+const channelsInput = arguments[2]
 
-if (!channelsFile) throw new Error('No channels file provided. Call: telegram-report-... channels.txt')
+if (!channelsInput) throw new Error('No channels file provided. Call: telegram-report-xxx channels.txt')
 
 console.log(logo)
 
@@ -22,9 +22,9 @@ const progressBar = new cliProgress.SingleBar({
 }, cliProgress.Presets.shades_classic);
 
 const run = async () => {
+  const channels = await telegramUtils.loadChannelsList(channelsInput)
   const {apiId, apiHash} = await telegramUtils.getAppDetails()
   const client = await telegramUtils.getClient({apiId, apiHash})
-  const channels = await telegramUtils.readChannelsList(channelsFile)
 
   console.log(`Starting to report ${channels.length} channels...\n`)
   progressBar.start(channels.length, 0, {channel: ''});
@@ -46,14 +46,14 @@ const run = async () => {
       // console.debug(error)
     } finally {
       counter += 1
-      await telegramUtils.sleep(1000 - Date.now() + start)
+      await telegramUtils.sleep(1100 - Date.now() + start)
       progressBar.update(counter, {channel: ''})
     }
   }
 
   progressBar.stop()
   console.log(`\nReported ${reportedChannels} channels`)
-  if (!_isEmpty(failedChannels)) console.log('Failed to report these channels:', failedChannels)
+  if (!_isEmpty(failedChannels)) console.log(' -- Failed to report these channels:', failedChannels)
 
   await client.destroy()
 }

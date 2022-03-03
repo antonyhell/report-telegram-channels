@@ -11,6 +11,7 @@ const _uniqBy = require('lodash/fp/uniqBy')
 const _map = require('lodash/fp/map')
 const _trim = require('lodash/fp/trim')
 const {config} = require('./config')
+const fetch = require('node-fetch')
 
 module.exports = {
   async getClient ({apiId, apiHash}) {
@@ -29,6 +30,17 @@ module.exports = {
     if (!session) config.set('session', client.session.save())
 
     return client
+  },
+
+  async loadChannelsList (input) {
+    return /^https?:\/\//.test(_trim(input))
+      ? this.fetchChannelsList(input)
+      : this.readChannelsList(input)
+  },
+
+  async fetchChannelsList (url) {
+    const response = await fetch(url)
+    return this.parseChannels(await response.text())
   },
 
   async readChannelsList (channelsFile) {
