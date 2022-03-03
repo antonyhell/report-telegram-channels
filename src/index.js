@@ -1,21 +1,13 @@
 const cliProgress = require('cli-progress')
 const telegramUtils = require('./telegram_utils')
+const logo = require('./logo')
 
 const arguments = [].concat(process.argv)
 const channelsFile = arguments[2]
 
 if (!channelsFile) throw new Error('No channels file provided. Call: telegram-report-... channels.txt')
 
-console.log(`
- ___   _        _    __   __    _
-/ __| | |      /_\\   \\ \\ / /   /_\\
-\\__ \\ | |__   / _ \\   \\ V /   / _ \\
-|___/ |____| /_/ \\_\\   \\_/   /_/ \\_\\
- _   _   _  __  ___     _        _   ___   _  _   ___
-| | | | | |/ / | _ \\   /_\\    _ | | |_ _| | \\| | |_ _|
-| |_| | | ' <  |   /  / _ \\  | || |  | |  | .\` |  | |
- \\___/  |_|\\_\\ |_|_\\ /_/ \\_\\  \\__/  |___| |_|\\_| |___|
-`)
+console.log(logo)
 
 // const apiId = 12345678
 // const apiHash = '123456abcdfg'

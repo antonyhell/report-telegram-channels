@@ -4,14 +4,16 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "build": "pkg . && chmod +x dist/*",
-    "report": "node ./src/index.js ./channels.txt"
+    "build": "pkg --output dist/telegram-report . && chmod +x dist/*",
+    "start": "node ./src/index.js ./channels.txt"
   },
   "keywords": [],
   "author": "Antony Hell <antony@hell.direct>",
   "license": "MIT",
   "dependencies": {
+    "chalk": "^5.0.0",
     "cli-progress": "^3.10.0",
+    "conf": "^10.1.1",
     "input": "^1.0.1",
     "lodash": "^4.17.21",
     "telegram": "^2.5.2"
