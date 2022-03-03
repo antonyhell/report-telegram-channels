@@ -14,11 +14,13 @@ You'll need to obtain an API ID and hash:
 See example in channels.txt
 
 ### 2. Run built binary
-#### Select required binary
+#### Select required binary from [here](https://github.com/antonyhell/report-telegram-channels/releases/latest)
 
-- macOS [Intel x86](dist/telegram-report-macos-x64) / [Apple silicone](dist/telegram-report-macos-arm64)
-- Windows [Intel x86](telegram-report-win-x64.exe) / [ARM](telegram-report-win-arm64.exe)
-- Linux [Intel x86](telegram-report-linux-x64) / [ARM](telegram-report-linux-arm64)
+https://github.com/antonyhell/report-telegram-channels/releases/download/v0.0.1/telegram-report-linux-arm64
+
+- macOS [Intel x86](https://github.com/antonyhell/report-telegram-channels/releases/latest/download/telegram-report-macos-x64) / [Apple silicone](https://github.com/antonyhell/report-telegram-channels/releases/latest/download/telegram-report-macos-arm64)
+- Windows [Intel x86](https://github.com/antonyhell/report-telegram-channels/releases/latest/download/telegram-report-win-x64.exe) / [ARM](https://github.com/antonyhell/report-telegram-channels/releases/latest/download/telegram-report-win-arm64.exe)
+- Linux [Intel x86](https://github.com/antonyhell/report-telegram-channels/releases/latest/download/telegram-report-linux-x64) / [ARM](https://github.com/antonyhell/report-telegram-channels/releases/latest/download/telegram-report-linux-arm64)
 
 #### Run command 
 This is an example for macOS Intel x86
